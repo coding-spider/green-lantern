@@ -1,0 +1,12 @@
+*.log
+*.swp
+*.tgz
+.DS_Store
+.idea
+.project
+node_modules
+npm-debug.log
+yarn-error.log
+.vscode
+
+.eslintcache

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/coding-spider/green-lantern/issues"
   },
-  "homepage": "https://github.com/coding-spider/green-lantern#readme"
+  "homepage": "https://github.com/coding-spider/green-lantern#readme",
+  "dependencies": {
+    "express": "4.17.1"
+  }
 }
