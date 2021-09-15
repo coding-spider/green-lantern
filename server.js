@@ -8,9 +8,8 @@ const APP_NAME = 'Green Lantern'
 
 app.use(express.json());
 
-app.post('/api/filter-data', (req, res) => {
-    return res.json({success: true});
-});
+// Routes
+app.use("/api/case-study", require("./controllers/case-study-ctrl.js"));
 
 app.listen(port, () => {
   console.log(`${APP_NAME} listening at http://localhost:${port}`)
