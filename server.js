@@ -3,7 +3,7 @@
 const express = require('express');
 const app = express();
 
-const port = 3005;
+const port = 80;
 const APP_NAME = 'Green Lantern'
 
 app.use(express.json());
