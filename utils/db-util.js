@@ -25,6 +25,22 @@ let getConnection = () => {
     });
 }
 
+// This is only required for testing purposes. In production we maintain connection pool
+let closeConnection = () => {
+    return new Promise((resolve, reject) => {
+        getConnection()
+            .then((client) => {
+                return client.close();
+            })
+            .then(resolve)
+            .catch((err) => {
+                console.error(err);
+                return reject(err);
+            })
+    });
+}
+
 module.exports = {
-    getConnection
+    getConnection,
+    closeConnection
 }

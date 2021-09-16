@@ -1,6 +1,7 @@
 'use strict'
 
 const moment = require('moment');
+
 const dbUtil = require('../utils/db-util');
 
 let filterData = ({ startDate = new Date(), endDate = new Date(), minCount, maxCount }) => {
