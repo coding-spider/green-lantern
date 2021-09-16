@@ -1,13 +1,14 @@
 'use strict'
 
+const moment = require('moment');
 const dbUtil = require('../utils/db-util');
 
 let filterData = ({ startDate = new Date(), endDate = new Date(), minCount, maxCount }) => {
     return new Promise((resolve, reject) => {
         const dbName = 'getir-case-study';
 
-        startDate = new Date(startDate);
-        endDate = new Date(endDate);
+        startDate = new Date(moment.utc(startDate).startOf('day').format());
+        endDate = new Date(moment.utc(endDate).endOf('day').format());
 
         if(isNaN(minCount)) {
             return reject(new Error(`Invalid minCount!`))
