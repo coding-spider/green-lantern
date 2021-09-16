@@ -8,6 +8,10 @@ const APP_NAME = 'Green Lantern'
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  return res.send('Green Lantern is happy to serve!');
+})
+
 // Routes
 app.use("/api/case-study", require("./controllers/case-study-ctrl.js"));
 
