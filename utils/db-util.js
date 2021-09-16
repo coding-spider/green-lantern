@@ -13,12 +13,9 @@ let getConnection = () => {
         //     console.log(`Returning already connected client`);
         //     return resolve(client);
         // }
-
-        console.log(`Establishing Client Connection...`);
         
         client.connect()
             .then(() => {
-                console.log(`Client Connected`);
                 return resolve(client);
             })
             .catch((err) => {
